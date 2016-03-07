@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:padding="20dp" >
+    
+    <TextView 
+         android:id="@+id/dialog_charge_sucess_title"
+         android:layout_width="match_parent"
+    	 android:layout_height="wrap_content"
+         android:text="请先去我的资料中\n输入品牌、车型"
+         android:textColor="@color/common_orange"
+         android:textSize="22sp"
+         android:textStyle="bold"
+         android:gravity="center"
+        />
+   
+	<View 
+	    android:id="@+id/dialog_cancel_bespoke_price"
+          android:layout_below="@id/dialog_charge_sucess_title"
+         android:layout_width="match_parent"
+    	 android:layout_height="1dp"
+    	 android:layout_marginTop="10dp"
+	     android:background="@color/common_light_gray"
+	    />
+    <TextView 
+         android:id="@+id/dialog_charge_sucess_confirm"
+         android:layout_centerInParent="true"
+         android:layout_below="@id/dialog_cancel_bespoke_price"
+         android:layout_marginTop="10dp"
+         android:layout_width="wrap_content"
+    	 android:layout_height="wrap_content"
+         android:text="我知道了"
+         android:textColor="@color/blue"
+         android:textSize="18sp"
+         android:gravity="center"
+         android:paddingLeft="25dp"
+         android:paddingRight="25dp"
+        />
+    
+    
+    
+    
+    
+
+</RelativeLayout>

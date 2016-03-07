@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listmode_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_white"
+        android:orientation="vertical" >
+
+        <!-- 头布局 距离 价格 好评 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@color/common_light_gray"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/list_mode_rl_distance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/common_white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/list_mode_tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="距离"
+                    android:textColor="@color/common_orange"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/list_mode_v_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_orange" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list_mode_rl_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/common_white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/list_mode_tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="价格"
+                    android:textColor="@color/common_light_black"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/list_mode_v_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_middle_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list_mode_rl_score"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/common_white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/list_mode_tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="评分"
+                    android:textColor="@color/common_light_black"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/list_mode_v_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_middle_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+         <ListView
+             android:id="@+id/fragment_listmode_listview"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:divider="#00000000"
+             android:dividerHeight="0dp"
+             android:listSelector="@android:color/transparent" />
+        
+        <!-- fragment布局容器     android:listSelector="@android:color/transparent" -->
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/listmode_fragment_loading"
+        android:layout_marginTop="5dp"
+        layout="@layout/map_request_data"
+        android:visibility="gone" />
+
+</FrameLayout>

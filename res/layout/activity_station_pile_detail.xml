@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_light_white"
+    android:orientation="vertical" >
+    <!-- 头部 -返回-分享-收藏 -->
+    <RelativeLayout 
+        android:background="@color/common_orange"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        >
+        <ImageButton
+            android:id="@+id/detail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/nav_btn_back"
+            android:background="@android:color/transparent"/>
+        <ImageButton
+            android:id="@+id/detail_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:src="@drawable/nav_btn_collect"
+            android:background="@android:color/transparent" />
+        <ImageButton
+            android:id="@+id/detail_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/detail_collect"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/nav_btn_link"
+            android:background="@android:color/transparent" />
+	</RelativeLayout>
+	<!-- 左图 右地址 名称 -->
+	
+	<ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:scrollbars="none"
+	    >
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	        
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/common_white"
+	    android:paddingLeft="14dp"
+	    android:paddingRight="14dp"
+	    android:paddingTop="22dp"
+	    android:paddingBottom="7dp"
+	    android:orientation="horizontal"
+	    >
+        <!-- 图片 评论 数量 -->
+	    <LinearLayout 
+	       android:layout_width="75dp" 
+	       android:layout_height="wrap_content"
+	       android:orientation="vertical"
+	       android:layout_marginRight="10dp"
+	        android:background="@color/common_light_gray"
+	       android:padding="1dp"
+	        >
+	        <FrameLayout 
+	             android:layout_width="wrap_content" 
+	       		 android:layout_height="wrap_content"
+	       		
+	            >
+	            <!-- android:scaleType="centerInside" -->
+	          <ImageView 
+	            android:id="@+id/detail_image"
+	            android:layout_width="75dp" 
+	       		android:layout_height="65dp"
+	            android:src="@drawable/imgno"
+	            android:scaleType="fitXY"
+	            />
+	            <TextView 
+	                android:id="@+id/detail_image_num"
+	                android:layout_width="wrap_content" 
+	       			android:layout_height="wrap_content"
+	                android:text="1/2"
+	                android:textColor="@color/common_white"
+	                android:textSize="8dp"
+	                android:visibility="gone"
+	                android:layout_marginBottom="2dp"
+	                android:layout_marginRight="2dp"
+	                android:layout_gravity="right|bottom"
+	                android:background="@color/common_black"
+	                />
+	        </FrameLayout>
+	       <View 
+	           android:layout_width="match_parent"
+	           android:layout_height="1dp"
+	           android:background="@color/common_light_gray"
+	           
+	           />
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:id="@+id/detail_ll_comment"
+	            >
+	            <TextView 
+	                android:id="@+id/detail_commentstar"
+	                android:layout_width="match_parent"
+	           		android:layout_height="wrap_content"
+	           		android:background="@color/common_white"
+	           		android:gravity="center"
+	           		android:text="0.0分"
+	           		android:textSize="14sp"
+	           		android:paddingTop="3dp"
+	           		android:textColor="@color/common_gray"
+	                />
+	             <TextView 
+	                android:id="@+id/detail_commentnum"
+	                android:layout_width="match_parent"
+	           		android:layout_height="wrap_content"
+	           		android:text="(0评论)"
+	           		android:gravity="center"
+	           		android:textSize="12sp"
+	           		android:paddingBottom="3dp"
+	           		android:background="@color/common_white"
+	           		android:textColor="@color/common_gray"
+ 	                />
+	        </LinearLayout>
+	    </LinearLayout>
+	    <!-- 地址 名称 距离 导航 -->
+	    <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        >
+	        <TextView 
+	            android:id="@+id/detail_name"
+	            android:layout_width="180dp"
+	            android:layout_height="wrap_content"
+	            android:text="杭州天际大厦充电桩"
+	            android:textColor="@color/common_black"
+	            android:textSize="18sp"
+	            android:layout_alignParentLeft="true"
+	            />
+	        <TextView 
+	            android:id="@+id/detail_distance"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="325m"
+	            android:textColor="@color/common_black"
+	            android:textSize="18sp"
+	            android:layout_alignParentRight="true"
+	            />
+	        <!-- 快充  空闲 -->
+	      <LinearLayout
+            android:id="@+id/detail_ll_fast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_name"
+            android:layout_alignParentLeft="true"
+             android:layout_marginTop="5dp"
+            android:background="@drawable/popup_detail_arc_bg"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快充"
+                android:textColor="@color/common_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/detail_fast_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/popup_detaile_circle_gray"
+                android:gravity="center"
+                android:text="0"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/common_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空闲"
+                android:textColor="@color/common_black"
+                 android:layout_marginLeft="3dp"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/detail_fast_idle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/popup_detaile_circle_green"
+                android:gravity="center"
+                android:text="0"
+                 android:layout_marginLeft="2dp"
+                android:textColor="@color/common_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+	 <!-- 慢充  空闲 -->
+	     <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/detail_ll_fast"
+            android:layout_below="@id/detail_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/popup_detail_arc_bg"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="慢充"
+                 android:textColor="@color/common_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/detail_slow_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/popup_detaile_circle_gray"
+                android:gravity="center"
+                android:text="0"
+                 android:layout_marginLeft="2dp"
+                android:textColor="@color/common_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="空闲"
+                android:textColor="@color/common_black"
+                 android:layout_marginLeft="3dp"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/detail_slow_idle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/popup_detaile_circle_green"
+                android:gravity="center"
+                android:text="0"
+                 android:layout_marginLeft="2dp"
+                android:textColor="@color/common_white"
+                android:textSize="12sp" />
+        </LinearLayout>   
+        <!-- 地址 -->
+	        <TextView 
+	            android:id="@+id/detail_address"
+	            android:layout_width="200dp"
+	            android:layout_marginTop="5dp"
+	            android:layout_height="wrap_content"
+	            android:text="杭州市天目山路181号天际大厦1101杭州市天目山路181号天际大厦1101"
+	            android:textColor="@color/common_black"
+	            android:textSize="14sp"
+	            android:layout_below="@id/detail_ll_fast"
+	            />
+	        <!-- 导航 -->
+	        <ImageButton
+	            android:id="@+id/detail_navgation"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_below="@id/detail_ll_fast"
+	            android:src="@drawable/bg_map_navigation"
+	             android:paddingTop="10dp"
+	             android:paddingBottom="5dp"
+	             android:paddingLeft="10dp"
+	             android:background="@android:color/transparent"
+	             />
+	        <View 
+	            android:layout_width="1dp"
+	            android:layout_height="40dp"
+	            android:background="@color/common_light_gray"
+	            android:layout_toLeftOf="@id/detail_navgation"
+	            android:layout_below="@id/detail_ll_fast"
+	            android:layout_marginTop="5dp"
+	            />
+	        <!-- 价格 问号按钮 -->
+	        <LinearLayout 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/detail_address"
+	            android:orientation="horizontal"
+	            android:gravity="center"
+	            >
+             <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="¥"
+	            android:gravity="center_vertical"
+	            android:textColor="@color/common_black"
+	            android:textSize="14sp"
+	            />
+	        <TextView 
+	             android:id="@+id/detail_price"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="1.00元/度"
+	            android:layout_marginLeft="4dp"
+	            android:gravity="center_vertical"
+	            android:textColor="@color/common_black"
+	            android:textSize="13sp"
+	            />
+	         <ImageButton
+	            android:id="@+id/detail_price_help_icon"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/bg_map_question"
+	            android:layout_marginLeft="4dp"
+	            android:background="@android:color/transparent"
+	            />
+	        </LinearLayout>
+	    </RelativeLayout>
+	</LinearLayout>
+	<!-- 开放时间  服务电话 -->
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="14dp"
+	    android:layout_marginTop="1dp"
+	    android:background="@color/common_white"
+	    >
+	    <TextView 
+	        android:id="@+id/detail_tag_open"
+	        android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	        android:text="开放时间:"
+	        android:textColor="@color/common_black"
+	        android:textSize="13sp"
+	        />
+	     <TextView 
+	        android:id="@+id/detail_open_time"
+	        android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	        android:text="24小时"
+	        android:layout_marginLeft="3dp"
+	        android:textColor="@color/common_black"
+	        android:textSize="14sp"
+	        android:layout_toRightOf="@id/detail_tag_open"
+	        />
+	    <TextView 
+	        android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	        android:text="服务电话:"
+	        android:textColor="@color/common_black"
+	        android:textSize="13sp"
+	        android:layout_below="@id/detail_tag_open"
+	        />
+	    <TextView 
+	        android:id="@+id/detail_service_tel"
+	        android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	        android:text="400-8000000"
+	         android:layout_marginLeft="3dp"
+	        android:textColor="@color/common_black"
+	        android:textSize="14sp"
+	        android:layout_toRightOf="@id/detail_tag_open"
+	         android:layout_below="@id/detail_tag_open"
+	        />
+	    <TextView
+	        android:id="@+id/detail_commit_error"
+	        android:layout_width="40dp"
+	   		android:layout_height="40dp"
+	        android:text="纠错"
+	        android:gravity="center"
+	        android:textSize="13sp"
+	        android:textColor="@color/common_black"
+	        android:background="@drawable/common_hollow_circle"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        />
+	     <TextView
+	        android:id="@+id/detail_commit_comment"
+	       android:layout_width="40dp"
+	   		android:layout_height="40dp"
+	        android:text="留言"
+	        android:gravity="center"
+	        android:textSize="13sp"
+	        android:visibility="gone"
+	        android:textColor="@color/common_black"
+	        android:background="@drawable/common_hollow_circle"
+	        android:layout_toLeftOf="@id/detail_commit_comment"
+	        android:layout_marginRight="14dp"
+	        android:layout_centerVertical="true"
+	        />
+	    
+	</RelativeLayout>
+	<!-- gridview 电桩数量  listselector 要和父容器背景色一直，防止出现点击有背景-->
+	<FrameLayout 
+	     android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="1dp"
+	     android:background="@color/common_white"
+	    >
+	 	<com.bm.wanma.view.MyDetailGridView 
+        	android:id="@+id/detail_grid"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:numColumns="3"
+        	android:verticalSpacing="10dp"
+        	android:horizontalSpacing="10dp" 
+        	android:layout_marginTop="1dp"
+        	android:padding="14dp"
+        	android:listSelector="@color/common_white"
+       					 >
+    	</com.bm.wanma.view.MyDetailGridView>
+	</FrameLayout>
+	<ImageView 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/bg_map_line"
+	    android:background="@color/common_light_white"
+	    android:layout_marginTop="10dp"
+	    />
+	<!-- 所属，功率，接口 -->
+	<LinearLayout 
+	    android:visibility="gone"
+	    android:id="@+id/detail_ll_power_interface"
+	    android:layout_width="match_parent"
+	    android:layout_height="34dp"
+	    android:background="@color/common_white"
+	    android:orientation="horizontal"
+	    android:baselineAligned="false"
+	    >
+	    <LinearLayout 
+	       android:layout_width="0dp"
+	       android:layout_height="match_parent"
+	       android:layout_weight="1" 
+	       android:gravity="center"
+	        >
+	     <ImageView 
+	      android:id="@+id/detail_owner_icon"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:src="@drawable/bg_map_tesla"
+	      android:contentDescription="@string/app_name"
+	      />
+	    <TextView 
+	         android:id="@+id/detail_owner_name"
+	         android:layout_width="wrap_content"
+	     	 android:layout_height="wrap_content"
+	     	 android:text="特斯拉"
+	     	 android:layout_marginLeft="3dp"
+	     	 android:textSize="14sp"
+	     	 android:textColor="@color/common_red"
+	        />
+	    </LinearLayout>
+	    <LinearLayout 
+	       android:layout_width="0dp"
+	       android:layout_height="match_parent"
+	       android:layout_weight="1" 
+	       android:gravity="center"
+	        >
+	     <TextView 
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:text="接口:"
+	      android:textSize="14sp"
+	      android:textColor="@color/common_light_black"
+	      />
+	    <TextView 
+	         android:id="@+id/detail_owner_interface"
+	         android:layout_marginLeft="3dp"
+	         android:layout_width="wrap_content"
+	     	 android:layout_height="wrap_content"
+	     	 android:text="国标"
+	     	 android:textSize="14sp"
+	     	 android:textColor="@color/common_orange"
+	        />
+	        
+	        
+	    </LinearLayout>
+	     <LinearLayout 
+	       android:layout_width="0dp"
+	       android:layout_height="match_parent"
+	       android:layout_weight="1" 
+	       android:gravity="center"
+	        >
+	     <TextView 
+	         android:layout_width="wrap_content"
+	     	 android:layout_height="wrap_content"
+	     	 android:text="功率:"
+	     	 android:textSize="14sp"
+	     	 android:textColor="@color/common_light_black"
+	        />
+	    <TextView 
+	         android:id="@+id/detail_owner_power"
+	         android:layout_width="wrap_content"
+	     	 android:layout_height="wrap_content"
+	     	 android:layout_marginLeft="3dp"
+	     	 android:text="20kw"
+	     	 android:textSize="14sp"
+	     	 android:textColor="@color/common_orange"
+	        />
+	    </LinearLayout>
+	    
+	</LinearLayout>
+	
+	
+	<com.bm.wanma.view.MyDetailListView
+	    android:id="@+id/detail_listview"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:divider="@null"
+	    android:listSelector="@color/common_white"
+	    ></com.bm.wanma.view.MyDetailListView>
+	
+	
+	 </LinearLayout>
+   </ScrollView>
+
+</LinearLayout>

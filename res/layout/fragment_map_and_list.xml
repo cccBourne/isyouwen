@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+       <!-- title_bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/common_orange"
+        android:layout_gravity="center_vertical"
+       >
+
+        <ImageView
+            android:id="@+id/scanbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="14dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/nav_btn_scanning" />
+		<!-- 搜索框 -->
+       <RelativeLayout android:id="@+id/search_rl"
+            android:layout_width="210dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/home_search_bg"
+            >
+		    	<ImageView 
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_alignParentLeft="true"
+		    	     android:background="@android:color/transparent"
+		    	    android:src="@drawable/nav_btn_search"
+		    	    />
+            
+        </RelativeLayout>
+        
+        <ImageButton
+            android:id="@+id/swith_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+             android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/nav_btn_list" />
+       
+       
+    </RelativeLayout>
+    
+    <!-- 内容部分， fragment切换 -->
+
+    <LinearLayout
+        android:id="@+id/map_list_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </LinearLayout>
+    
+  
+    
+</LinearLayout>

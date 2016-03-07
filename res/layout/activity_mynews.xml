@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_light_white"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:background="@color/common_orange"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        >
+        <ImageButton
+            android:id="@+id/mynews_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/nav_btn_back"
+            android:background="@android:color/transparent"/>
+        <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="消息"
+             android:textColor="@color/common_white"
+             android:textSize="18sp"
+             android:layout_centerVertical="true"
+             android:layout_centerInParent="true"
+            />
+        </RelativeLayout>
+        <!-- 系统消息  我的反馈 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@color/common_light_gray"
+        android:orientation="horizontal"
+        >
+       <RelativeLayout
+           		android:id="@+id/mynews_system_rl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/common_white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/mynews_system_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="系统消息"
+                    android:textColor="@color/common_orange"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/mynews_system_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_orange" />
+            </RelativeLayout>
+         <RelativeLayout
+                android:id="@+id/mynews_feedback_rl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/common_white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/mynews_feedback_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="我的反馈"
+                    android:textColor="@color/common_gray"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/mynews_feedback_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_middle_gray" />
+            </RelativeLayout>
+        
+    </LinearLayout>
+    
+     <LinearLayout
+        android:id="@+id/mynews_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical" >
+    </LinearLayout>
+    
+    
+
+</LinearLayout>

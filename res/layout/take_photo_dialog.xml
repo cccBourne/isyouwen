@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/common_white"
+    android:orientation="vertical" >
+
+	<TextView 
+    	 android:layout_width="match_parent"
+       	 android:layout_height="wrap_content"
+       	  android:background="@color/common_orange"
+       	  android:text="请选择"
+    		android:textSize="20sp"
+    		android:gravity="center"
+    		 android:textColor="@color/common_white"
+    		 android:padding="10dp"
+    />
+	
+    <TextView 
+        android:id="@+id/takephoto"
+    	 android:layout_width="match_parent"
+       	 android:layout_height="wrap_content"
+       	  android:background="@color/common_white"
+       	  android:text="拍照"
+    		android:textSize="17sp"
+    		android:gravity="center"
+    		 android:padding="10dp"
+    		 android:textStyle="bold"
+    	
+    />
+    <View 
+         android:layout_width="match_parent"
+       	 android:layout_height="1dp"
+       	 android:background="@color/common_light_gray"
+        />
+     <TextView 
+          android:id="@+id/selectphoto"
+    	 android:layout_width="match_parent"
+       	 android:layout_height="wrap_content"
+       	  android:background="@color/common_white"
+       	  android:text="从手机相册选择"
+    		android:textSize="17sp"
+    		android:gravity="center"
+    		 android:padding="10dp"
+    		  android:textStyle="bold"
+    	
+    />
+      <View 
+         android:layout_width="match_parent"
+       	 android:layout_height="1dp"
+       	 android:background="@color/common_light_gray"
+        
+        />
+      <TextView 
+          android:id="@+id/canclephoto"
+    	 android:layout_width="match_parent"
+       	 android:layout_height="wrap_content"
+       	  android:background="@color/common_white"
+       	  android:text="取消"
+    		android:textSize="20sp"
+    		android:gravity="center"
+    		 android:padding="10dp"
+    		  android:textStyle="bold"
+    	
+    />
+    
+</LinearLayout>

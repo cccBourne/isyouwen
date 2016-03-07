@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 评分详情界面，listview item布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/common_white"
+    android:orientation="vertical" >
+    <View 
+        android:id="@+id/listview_item_comment_line"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/common_light_white"
+        
+        />
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        >
+        <!-- border_outside_color 外部圆圈的颜色 --> 
+    	<!-- border_inside_color 内部部圆圈的颜色 --> 
+    	<!-- border_thickness 外圆和内圆的宽度 --> 
+		 <com.bm.wanma.view.RoundImageView  
+         	 android:id="@+id/listview_item_comment_photo"
+         	 android:layout_width="30dp"
+          	 android:layout_height="30dp"
+          	 android:layout_alignParentLeft="true"
+          	  android:layout_centerVertical="true"
+       		 android:src="@drawable/bg_map_head2" 
+       		 imagecontrol:border_inside_color="@color/common_white"  
+       		 imagecontrol:border_outside_color="@color/common_white"  
+        	 imagecontrol:border_thickness="1dp"/> 
+        <TextView 
+             android:id="@+id/listview_item_comment_nick"
+         	 android:layout_width="wrap_content"
+          	 android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="8dp"
+             android:textColor="@color/common_black"
+             android:textSize="15sp"
+             android:layout_toRightOf="@id/listview_item_comment_photo"
+            
+            />
+       
+             <RatingBar
+                android:id="@+id/listview_item_comment_ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:minHeight="30dp"
+                android:maxHeight="40dp"
+                android:progressDrawable="@drawable/comment_detail_rating"
+                android:rating="5" >
+            </RatingBar>
+        
+    </RelativeLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/common_light_gray"
+        />
+    <TextView 
+        android:id="@+id/listview_item_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/common_gray"
+        android:textSize="15sp"
+        android:paddingRight="14dp"
+        android:paddingLeft="54dp"
+        android:paddingTop="8dp"
+        />
+     <TextView 
+        android:id="@+id/listview_item_comment_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/common_gray"
+        android:textSize="15sp"
+        android:paddingLeft="54dp"
+        android:paddingBottom="5dp"
+        />
+ 
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 登录界面 字体颜色 -->
+    <color name="common_white">#ffffff</color>
+    <color name="common_light_white">#ededed</color>
+    <color name="common_light_gray">#dcdcdc</color>
+    <color name="common_middle_gray">#bcbcbc</color>
+    <color name="common_gray">#808080</color>
+    <color name="common_light_black">#666666</color>
+    <color name="common_black">#333333</color>
+    <color name="common_orange">#ff8800</color>
+    <color name="common_light_yellow">#fff6ec</color>
+    <color name="common_yellow">#c15a00</color>
+    <color name="common_green">#009933</color>
+    <color name="common_red">#FF0000</color>
+    
+    <color name="blue">#0059c2</color>
+</resources>

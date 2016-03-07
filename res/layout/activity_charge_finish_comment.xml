@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+      android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+    
+     <RelativeLayout
+        android:background="@color/common_orange"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        >
+        <ImageButton
+            android:id="@+id/charge_finish_comment_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/nav_btn_back"
+            android:background="@android:color/transparent"/>
+        <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="评价"
+             android:textColor="@color/common_white"
+             android:textSize="18sp"
+             android:padding="5dp"
+             android:layout_centerVertical="true"
+             android:layout_centerInParent="true"
+            
+            />
+        </RelativeLayout>
+        <LinearLayout 
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="评分:"
+                android:paddingBottom="3dp"
+                android:textColor="@color/common_gray"
+                android:textSize="16sp"
+                />
+            <RatingBar
+                android:id="@+id/charge_finish_comment_ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:minHeight="30dp"
+                android:maxHeight="40dp"
+                android:progressDrawable="@drawable/comment_detail_rating"
+                android:stepSize="1"
+                android:rating="5" >
+            </RatingBar>
+            
+        </LinearLayout>
+     
+    <com.bm.wanma.view.ContainsEmojiEditText 
+         android:id="@+id/charge_finish_comment_content"
+         android:layout_width="match_parent"
+         android:layout_height="150dp"
+         android:textSize="14sp"
+         android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         android:hint="请输入评价内容"
+         android:maxLength="200"
+         android:gravity="top"
+         android:textColorHint="@color/common_gray"
+         android:layout_marginTop="20dp"
+         android:inputType="textMultiLine"
+          android:background="@drawable/common_edit_shape_selector"
+         />
+     
+     <TextView 
+         android:id="@+id/charge_finish_comment_commit"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="30dp"
+          android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+         android:textColor="@color/common_white"
+         android:gravity="center"
+         android:textSize="17sp"
+         android:text="确定"
+         android:background="@drawable/bespoke_detail_led_light_gray"
+         />
+     
+     
+     
+     
+        
+
+</LinearLayout>
